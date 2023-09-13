@@ -1,0 +1,855 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-y: scroll;
+    overflow-x: hidden;
+ }
+
+.Container{
+    margin: auto;
+    width: 960px;
+}
+.Placeholder{
+    width: 100%; 
+    height: 238px; 
+    overflow: hidden;
+    position: relative;
+    opacity: 0.56;
+}
+
+header{
+    width: 100%;    
+    background-color: white;
+    position: fixed;
+    top: 0; 
+    z-index: 1000;
+}
+
+.Contact{
+    background-color: #2e2e2e;
+    height: 100%;
+    min-height: 38px;
+    width: 100%;
+}
+
+.Contact-Items{
+    display: flex;
+    justify-content: space-between;
+}
+.Contact-Item-Location{
+    margin-top: 8px;
+    display: flex;
+}
+
+.Contact-Item-Adress{
+    margin-right: 166px;
+    margin-left: 85px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.Linkedin-Adress{
+    width: 15px;
+    height: 15px;
+    margin-right: 14px;
+}
+
+.Email-Adress{
+    width: 15px;
+    height: 15px;
+}
+
+.Location, .Phone-Number{
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Navigation{
+    width: 100%;
+    height: 98px;
+    padding-top: 18.5px;
+    padding-bottom: 18.5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Navigation-Items{
+    display: flex;
+}
+
+.Header-Nav{
+    display: flex;
+    margin-top: 50px;
+    padding-bottom: 15px;
+    padding-left: 85px;
+}
+
+ul{
+    display: flex;
+}
+
+.Nav-Home{
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #333;
+}
+
+.Nav-About, .Nav-OurSolutions, .Nav-OurCustomers, .Nav-Contacts{
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 6px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Nav-Contacts{
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Header-Link, .Dropdown-Solutions, .Dropdown-Customers{
+    text-decoration: none;
+    color: inherit;
+    padding-left: 15.25px;
+    padding-right: 15.25px;
+    z-index: 1;
+}
+
+.Header-Link-Solutions{
+    text-decoration: none;
+    color: inherit;
+    z-index: 1;
+}
+
+.Home-Button-Image{
+    width: 181px;
+    height: 98px;
+    margin-right: 59px;
+}
+
+.Nav-About:hover, .Nav-OurSolutions:hover, .Nav-OurCustomers:hover, .Nav-Contacts:hover{
+    border-bottom: 2px solid #333;
+}
+
+.Dropdown-Customers, .Dropdown-Solutions{
+    position: relative;
+    touch-action: manipulation;
+    display: flex;
+}
+
+.Header-Link-Customers, .Header-Link-Solutions{
+    display: flex;
+    text-decoration: none;
+    color: #333;
+}
+
+.Dropdown-Menu-OurCustomers, .Dropdown-Menu-OurSolutions{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Dropdown-Customers:hover .Dropdown-Menu-OurCustomers, .Dropdown-Solutions:hover .Dropdown-Menu-OurSolutions {
+    display: block;
+}
+
+.Customers-Anchor, .Solutions-Anchor{
+    text-decoration: none;
+    color: inherit;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.Dropdown-Menu-OurCustomers li{
+    width: 180px;
+    height: 48px;
+    background-color: white;
+    border-bottom: 1px solid #d1d1d1;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.Dropdown-Menu-OurSolutions li{
+    width: 330px;
+    height: 48px;
+    background-color: white;
+    border-bottom: 1px solid #d1d1d1;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.Dropdown-Menu-OurCustomers li:hover{
+    background-color: black;
+    color: white;
+}
+
+.Dropdown-Menu-OurSolutions li:hover{
+    background-color: black;
+    color: white;
+}
+.Dropdown-Icon{
+    width: 10px;
+    height: 6px;
+    margin-left: 11px;
+    transition: 0.4s;
+}
+
+.Header-Link-Customers, .Header-Link-Solutions{
+    align-items: center;
+}
+
+.Header-Link-Customers:hover .Dropdown-Icon{
+    transform: rotate(200grad);
+}
+
+.Header-Link-Solutions:hover .Dropdown-Icon{
+    transform: rotate(200grad);
+}
+
+.Sliding-Images{
+    margin-top: 173px;
+    width: 100%; 
+    height: 238px; 
+    overflow: hidden;
+    position: relative;
+    opacity: 0.56;
+}
+
+.Slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    background-position: 50% 50%;
+}
+
+.Sliding-Image1{
+    background-image: url(https://lirp.cdn-website.com/6b94b411/dms3rep/multi/opt/pexels-photo-3774903-cf6ec6f2-1920w.jpeg);
+    animation: Slide-fade1 9s infinite; 
+}
+
+.Sliding-Image2{
+    background-image: url(https://lirp.cdn-website.com/6b94b411/dms3rep/multi/opt/imac-apple-mockup-app-38544-fc0196bc-1920w.jpeg);
+    animation: Slide-fade 9s infinite 3s;
+}
+
+.Sliding-Image3{
+    background-image: url(https://lirp.cdn-website.com/6b94b411/dms3rep/multi/opt/pexels-photo-5082579-2bc2e5c1-1920w.jpeg);
+    animation: Slide-fade 9s infinite 6s;
+}
+
+@keyframes Slide-fade1{
+    0%, 70% {
+        opacity: 1;
+    }
+}
+
+@keyframes Slide-fade {
+    0%, 25% {
+        opacity: 0;
+      }
+      30%, 55% {
+        opacity: 1;
+      }
+      60%, 85% {
+        opacity: 0;
+      }
+}
+
+.Seamless-Experance{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    color: #272725;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 25px;
+    margin-bottom: 55px;
+}
+
+.Seamless-Experance-Items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Seamless-Experance-Item{
+    width: 450px;
+}
+
+.Seamless-Experance-Item-Img1{
+    width: 420px;
+    height: 410px;
+    transition: 0.3s; 
+}
+
+.Seamless-Experance-Item-Img2{
+    width: 450px;
+    height: 368px;
+    transition: 0.3s; 
+}
+.Seamless-Experance-Item-Img1:hover{
+    transform: scale(1.1);
+}
+
+.Seamless-Experance-Item-Img2:hover{
+    transform: scale(1.1);
+}
+
+.Comprehensive-Platform, .Ease-Of-Use{
+    color: #997361;
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 44px;
+    margin-bottom: 40px;
+}
+
+.Ease-Of-Use{
+    margin-top: 79px;
+}
+
+.Comprehensive-Platform-Text, .Ease-Of-Use-Text{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #888a8c;
+}
+
+.Healthcare-Section-Icon-Start{
+    display: flex;
+    justify-content: center;
+    margin-top: 49px;
+}
+
+.For-Healthcare-Background{
+    background-color: #f4f4f3;
+    width: 100%;
+    height: 100%;
+}
+
+.Healthcare-Section-Title{
+    font-size: 35px;
+    text-align: center;
+    color: #272725;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 15px;
+}
+
+.Healthcare-Ecosystem-Items-Part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Healthcare-Ecosystem-Item{
+    width: 230px;
+    padding: 3.5px;
+}
+
+.Healthcare-Ecosystem-Item-Img{
+    display: flex;
+    margin-top: 10px;
+    width: 231.25px;
+    height: 231.25px;
+}
+
+.Healthcare-Ecosystem-Item-Title{
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #997361;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 16px;
+}
+
+.Healthcare-Ecosystem-Item-Text{
+    font-size: 14px;
+    font-family: Helvetica;
+    font-weight: 400;
+    color: #333333;
+    text-align: center;
+    padding-bottom: 15px;
+
+}
+
+.Doctors-Ul, .LabTests-Ul, .Radiology-Ul, .Retail-Ul, .Insurance-Ul, .Pediatric-Ul, .Elderly-Ul, .MedicalHistory-Ul{
+    display: block;
+    text-align: left;
+    padding-left: 40px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.Doctors-Ul{
+    margin-bottom: 14px;
+}
+
+.LabTests-Ul, .Radiology-Ul{
+    margin-bottom: 46px;
+}
+
+.Insurance-Ul{
+    margin-bottom: 30px;
+}
+
+.Pediatric-Ul{
+    margin-top: 28px;
+    margin-bottom: 16px;
+}
+
+.Elderly-Ul{
+    margin-top: 28px;
+}
+
+.MedicalHistory-Ul{
+    margin-top: 28px;
+    margin-bottom: 16px;
+}
+
+.Outpatient, .Supplements{
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.Experience-Seamless{
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.Insurance-Card{
+    margin-bottom: 64px;
+}
+
+.Individual-Profile{
+    margin-bottom: 32px;
+}
+
+.Prescription{
+    margin-bottom: 18px;
+}
+
+.Journey{
+    margin-bottom: 97px;
+}
+
+.Journey-Stages{
+    margin-bottom: 28px;
+}
+
+.Healthcare-Section-Icon-Finish{
+    padding-top: 26.5px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 26.5px;
+}
+
+.Manifesto{
+    display: flex;
+    background-color: #888a8c;
+    justify-content: space-between;
+}
+
+.MenImg{
+    width: 400px;
+    height: 400px;
+}
+
+.Manifesto-TextDiv{
+    background-color: white;
+    padding: 45px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1010px;
+}
+
+.Manifesto-Title{
+    color: #313131;
+    margin-bottom: 26px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.Manifesto-Text{
+    font-size: 16px;
+    text-align: left;
+    color: #888a8c;
+    font-weight: 400;
+}
+
+.Manifesto-TextP{
+    line-height: 1.5;
+    width: 570px;
+    margin-bottom: 19px;
+}
+
+.For-MoreInformation-Section-Background{
+    background-color: #f4f4f3;
+}
+
+.MoreInformation-Section-Title{
+    padding-top: 14.5px;
+    padding-bottom: 10px;
+    color: #272725;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.MoreInformation-Section-Line{
+    width: 42px;
+    height: 2px;
+    background-color: #987361;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MoreInformation-Section-Subtitle{
+    color: #987361;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.Inquire{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.FirstName-Input{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.First-Name{
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid;
+    height: 30px;
+    width: 430px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+label{
+    color: #3c3e47;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.LastName-Input{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.Last-Name{
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid;
+    height: 30px;
+    width: 430px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.Organization-Input{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.Organization{
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid;
+    height: 30px;
+    width: 246px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.JobTitle-Input{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.Job-Title{
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid;
+    height: 30px;
+    width: 246px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.Inquire-Part{
+    display: flex;
+}
+
+.Phone-Input{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.Phone{
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid;
+    height: 30px;
+    width: 430px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.E-Mail-Input{
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.E-Mail{
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid;
+    height: 30px;
+    width: 430px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.Message-Textarea{
+    margin-top: 20px;
+    padding-left: 15px;
+}
+
+.Message{
+    border: 0;
+    background: 0;
+    border-bottom: 1px solid;
+    padding: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    width: 900px;
+    height: auto;
+    min-height: 30px;
+}
+
+.Message::placeholder{
+    color: #999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal; 
+    text-align: left; 
+}
+
+.Checkbox-Input{
+    margin-top: 8px;
+    margin-right: 4.5px;
+    margin-bottom: 8px;
+}
+
+.Checkbox-Title{
+    color: #3c3e47;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+.Checkboxes{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.RadioBox-Title{
+    color: #3c3e47;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.Radio{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 4.5px;
+}
+
+.RadioBoxes{
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Agree-Input{
+    display: flex;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Agree{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 4.5px;
+}
+
+.Agree-Title{
+    color: #3c3e47;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    align-items: center; 
+    display: flex;
+}
+
+.Sumbit-Button{
+    display: flex;
+    justify-content: center;
+    margin-top: 118px;
+    padding-bottom: 40px;
+}
+
+.Sumbit{
+    border: none;
+    border: 2px solid #4b8578;
+    width: 277px;
+    height: 48px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 24px;
+    color: #4b8578;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+footer{
+    height: 225px;
+    background-color: #272725;
+}
+
+.Footer-Items{
+    display: flex;
+}
+
+.Footer-Home-Button-Img{
+    width: 160px;
+    height: 87px;
+}
+
+.Footer-Email-Adress-Img{
+    width: 15px;
+    height: 12px;
+    margin-right: 20px;
+}
+
+.Footer-Linkedin-Adress-Img{
+    width: 10px;
+    height: 11px;
+}
+
+.Footer-Adresses{
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.Footer-Button-And-Adresses{
+    padding-top: 40px;
+    margin-right: 180px;
+}
+
+.Contact-Title{
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #997361;
+    padding-top: 52px;
+    padding-bottom: 10px;
+}
+
+.Footer-Physical-Location, .Footer-Info-Adress, .Footer-Phone-Number{
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Footer-Info-Adress{
+    margin-top: 8px;
+    margin-bottom: 8px;
+} 
+
+.Footer-Ul li{
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Footer-Ul a{
+    color: inherit;
+    color: white;
+    text-decoration: none;
+}
+
+.Footer-Ul{
+    display: block;
+}
+
+.Footer-Navigation{
+    margin-top: 60px;
+    margin-left: 75px;
+}
+
+.Footer-Nav-About{
+    margin-bottom: 12px;
+}
+
+.Footer-Nav-OurCustomers{
+    margin-bottom: 12px;
+}
+
+.Footer-Nav-OurSolutions{
+    margin-bottom: 12px;
+}
